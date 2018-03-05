@@ -1,22 +1,31 @@
 <h1>Burger Wish List</h1>
 
 <div id="wish-list">
+    <h3>I'm a Wish List</h3>
     <ul>
         {{#each burgers}}
+             {{#unless devoured}}
             <li>
                 <p><span class="label">ID:</span> {{this.id}}</p>
                 <p><span class="label">Burger:</span> {{this.burger_name}}</p>
 
                 <button data-id="{{this.id}}"class="devour-burger" data-devour={{devoured}} >Devoured it!</button>
             </li>
+            {{/unless}}
         {{/each}} 
     </ul>
 </div>
 <div id="devoured-burger">
+     <h3>I ate you</h3>
     <ul>
         {{#each burgers}}
             {{#if devoured}}
-                {{!-- {{> burgers devoured=true}} --}}
+                <li>
+                <p><span class="label">ID:</span> {{this.id}}</p>
+                <p><span class="label">Burger:</span> {{this.burger_name}}</p>
+
+                <button data-id="{{this.id}}"class="devour-burger" data-devour={{devoured}} >Devoured it!</button>
+            </li>
             {{/if}}
         {{/each}}
     </ul>

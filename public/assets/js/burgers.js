@@ -22,7 +22,7 @@ $(function() {
         //    $(this).attr("data-devourIt",true); console.log(this);
           // Reload the page to get the updated list
 
-        //   location.reload();
+          location.reload();
         }
       );
     });
