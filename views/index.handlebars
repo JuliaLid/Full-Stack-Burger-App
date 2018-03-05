@@ -6,7 +6,7 @@
     </div>
 
     <div id="add-burger">
-        <h2>What burger would you like to eat?</h2>
+        <h2>What burger would you like to devour?</h2>
         <form class="create-form">
             <div class="form-group">
                 <textarea id="burger" name="burger-input" rows="2" cols="50" placeholder="Eat Me!"></textarea>
@@ -16,6 +16,8 @@
     </div>
         
     <div id="wish-list">
+        <h2>Get in My Belly!</h2>
+        <hr>
         <ul>
             {{#each burgers}}
                 {{#unless devoured}}
@@ -27,6 +29,8 @@
         </ul>
     </div>
     <div id="devoured-burger">
+        <h2>Ate It</h2>
+        <hr>
         <ul>
             {{#each burgers}}
                 {{#if devoured}}
@@ -37,5 +41,4 @@
             {{/each}}
         </ul>
     </div>
-    
 </div>
