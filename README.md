@@ -5,10 +5,13 @@
 * Follow the MVC design pattern
 
 ## Link to Deployed App
-* [Burger Wish List](https://bosom-buddy-builder.herokuapp.com/)
-    * If clone the repo, use `npm install` to install dependencies. 
+* [Burger Wish List](https://burger-wish-list.herokuapp.com/)
+    * If you clone the repo, use `npm install` to install dependencies and set up a mySQL databse using provided `schema.sql` and `seeds.sql` files. 
 
 ## Technology Stack
+* HTML5
+* CSS
+    * Used CSS Gri for layout
 * JavaScript 
 * jQuery
 * Node.js
