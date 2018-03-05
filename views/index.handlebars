@@ -1,47 +1,41 @@
-<h1>Burger Wish List</h1>
+<div id="container">
+    <div id="title">
+        <h1>Burger Wish List</h1>
+        {{!-- <div>Icons made by <a href="http://www.freepik.com" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div> --}}
+        <img src="assets/img/burger.png" alt="picture of burger">
+    </div>
 
-<div id="wish-list">
-    <h3>I'm a Wish List</h3>
-    <ul>
-        {{#each burgers}}
-             {{#unless devoured}}
-            <li>
-                <p><span class="label">ID:</span> {{this.id}}</p>
-                <p><span class="label">Burger:</span> {{this.burger_name}}</p>
-
-                <button data-id="{{this.id}}"class="devour-burger" data-devour={{devoured}} >Devoured it!</button>
-            </li>
-            {{/unless}}
-        {{/each}} 
-    </ul>
-</div>
-<div id="devoured-burger">
-     <h3>I ate you</h3>
-    <ul>
-        {{#each burgers}}
-            {{#if devoured}}
+    <div id="add-burger">
+        <h2>What burger would you like to eat?</h2>
+        <form class="create-form">
+            <div class="form-group">
+                <textarea id="burger" name="burger-input" rows="2" cols="50" placeholder="Eat Me!"></textarea>
+            </div>
+            <button class="btn btn-2 btn-2a" type="submit">ADD</button>
+        </form>
+    </div>
+        
+    <div id="wish-list">
+        <ul>
+            {{#each burgers}}
+                {{#unless devoured}}
                 <li>
-                <p><span class="label">ID:</span> {{this.id}}</p>
-                <p><span class="label">Burger:</span> {{this.burger_name}}</p>
-
-                <button data-id="{{this.id}}"class="devour-burger" data-devour={{devoured}} >Devoured it!</button>
-            </li>
-            {{/if}}
-        {{/each}}
-    </ul>
-</div>
-
-<div id="add-burger">
-    <h2>Add a Burger to the Wish List</h2>
-    <h4>What burger would you like to eat?</h4>
-    <form class="create-form">
-        <div class="form-group">
-            <label for="burger">Burger:</label>
-            <textarea id="burger" name="burger-input" rows="2" cols="40"></textarea>
-        </div>
-        <button type="submit">ADD</button>
-    </form>
-
-    <p>Enter a burger you would like to devour some day.</p>
-    <p>Click "Add" button to add it to your wish list.</p>
+                    <p>{{this.id}}. {{this.burger_name}}<span><button class=" devour-burger btn btn-2 btn-2a" data-id={{this.id}} data-devour={{devoured}} >Devoured it!</button> </span> </p>
+                </li>
+                {{/unless}}
+            {{/each}} 
+        </ul>
+    </div>
+    <div id="devoured-burger">
+        <ul>
+            {{#each burgers}}
+                {{#if devoured}}
+                    <li>
+                    <p><span class="label"></span> {{this.id}}. </span> {{this.burger_name}}</p>
+                </li>
+                {{/if}}
+            {{/each}}
+        </ul>
+    </div>
+    
 </div>
