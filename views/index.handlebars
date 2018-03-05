@@ -1,0 +1,38 @@
+<h1>Burger Wish List</h1>
+
+<div id="wish-list">
+    <ul>
+        {{#each burgers}}
+            <li>
+                <p><span class="label">ID:</span> {{this.id}}</p>
+                <p><span class="label">Burger:</span> {{this.burger_name}}</p>
+
+                <button data-id="{{this.id}}" class="devour-burger data-devourIt=false" >Devoured it!</button>
+            </li>
+        {{/each}} 
+    </ul>
+</div>
+<div id="devoured-burger">
+    <ul>
+        {{#each burgers}}
+            {{#if devoured}}
+                {{!-- {{> burgers devoured=true}} --}}
+            {{/if}}
+        {{/each}}
+    </ul>
+</div>
+
+<div id="add-burger">
+    <h2>Add a Burger to the Wish List</h2>
+    <h4>What burger would you like to eat?</h4>
+    <form class="create-form">
+        <div class="form-group">
+            <label for="burger">Burger:</label>
+            <textarea id="burger" name="burger-input" rows="2" cols="40"></textarea>
+        </div>
+        <button type="submit">ADD</button>
+    </form>
+
+    <p>Enter a burger you would like to devour some day.</p>
+    <p>Click "Add" button to add it to your wish list.</p>
+</div>

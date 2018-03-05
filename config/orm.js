@@ -46,14 +46,16 @@ var orm  = {
             if (err){
                 throw err;
             }
-
+         
             cb(result);
+            
         });
     },
-    updayeOne: function(table,objColVals,condition,cb){
-        var queryString = "UPDATE " + table;
+    updateOne: function(table,objColVals,condition,cb){
+        var queryString = "UPDATE burgers_db. " + table;
         queryString += " SET ";
-        queryString += objToSql(objColVals);
+        // queryString += objToSql(objColVals);
+        queryString += "devoured = true ";
         queryString += " WHERE ";
         queryString += condition;
 
@@ -63,7 +65,7 @@ var orm  = {
             if (err) {
                 throw err;
             }
-
+            console.log("orm.js " +result);
             cb(result);
         });
     }
