@@ -29,7 +29,7 @@ var orm  = {
         });
     },
     updateOne: function(table,objColVals,condition,cb){
-        var queryString = "UPDATE burgers_db. " + table;
+        var queryString = "UPDATE " + table;
         queryString += " SET ";
         queryString += "devoured = true ";
         queryString += " WHERE ";
