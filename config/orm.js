@@ -65,7 +65,7 @@ var orm  = {
             if (err) {
                 throw err;
             }
-            console.log("orm.js " +result);
+            console.log("orm.js " +result.changedRows);
             cb(result);
         });
     }

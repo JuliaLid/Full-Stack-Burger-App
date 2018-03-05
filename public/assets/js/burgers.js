@@ -1,11 +1,13 @@
 $(function() {
     $(".devour-burger").on("click", function(event) {
       var id = $(this).data("id");
-    //   var devouredBurger = $(this).data("true");
+      console.log(id);
+      var devouredBurger = $(this).data("devour");
+      console.log(devouredBurger);
     //   var devouredBurger = $(this).data("data-devourIt");
   
       var newDevouredState = {
-        devoured: devouredBurger
+        devoured: true
       };
   
       // Send the PUT request.
@@ -15,8 +17,12 @@ $(function() {
       }).then(
         function() {
           console.log("changed devoured to", devouredBurger);
+          console.log("***********************");
+            // devouredBurger.value("true");
+        //    $(this).attr("data-devourIt",true); console.log(this);
           // Reload the page to get the updated list
-          location.reload();
+
+        //   location.reload();
         }
       );
     });

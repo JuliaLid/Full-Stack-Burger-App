@@ -7,7 +7,7 @@
                 <p><span class="label">ID:</span> {{this.id}}</p>
                 <p><span class="label">Burger:</span> {{this.burger_name}}</p>
 
-                <button data-id="{{this.id}}" class="devour-burger data-devourIt=false" >Devoured it!</button>
+                <button data-id="{{this.id}}"class="devour-burger" data-devour={{devoured}} >Devoured it!</button>
             </li>
         {{/each}} 
     </ul>
