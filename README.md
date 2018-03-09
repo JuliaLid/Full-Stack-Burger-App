@@ -1,4 +1,6 @@
 # Burger Wish List App
+![burger](https://user-images.githubusercontent.com/31745567/37233921-dc79832c-23ba-11e8-9a30-a112a3d98d2f.png)
+
 
 ## Project Overview
 * Create a burger logger app using MySQL, Node, Express, Handlebars and ORM. 
@@ -25,6 +27,7 @@
 
 ## Comments
 * Following the MVC design pattern was very challenging. I will need additional experience before I feel comfortable navigating it.
+
 ![mvc](https://user-images.githubusercontent.com/31745567/36998874-0527e622-2084-11e8-8920-489fb700156e.png)
 
 
