@@ -20,8 +20,8 @@
     * [`body-parser`](https://www.npmjs.com/package/body-parser): body parsing middleware.
     * [`Express-Handlebars`](https://www.npmjs.com/package/express-handlebars) template to generate HTML page.
     * [mysql](https://www.npmjs.com/package/mysql) for storing burger data.
-* JawsDB Remote Database.
 * [Heroku](https://www.heroku.com/) to deploy the app.
+* JawsDB Remote Database connected to Heroku app.
 
 ## Comments
 * Following the MVC design pattern was very challenging. I will need additional experience before I feel comfortable navigating it.

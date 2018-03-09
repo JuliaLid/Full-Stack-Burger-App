@@ -9,7 +9,7 @@
         <h2>What burger would you like to devour?</h2>
         <form class="create-form">
             <div class="form-group">
-                <textarea id="burger" name="burger-input" rows="2" cols="50" placeholder="Eat Me!"></textarea>
+                <textarea id="burger" name="burger-input" rows="2" cols="50" placeholder="Eat Me!" required="required"></textarea>
             </div>
             <button class="btn btn-2 btn-2a" type="submit">ADD</button>
         </form>
@@ -29,7 +29,7 @@
         </ul>
     </div>
     <div id="devoured-burger">
-        <h2>Ate It</h2>
+        <h2>Yum...</h2>
         <hr>
         <ul>
             {{#each burgers}}
