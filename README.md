@@ -10,8 +10,8 @@
 
 ## Technology Stack
 * HTML5
-* CSS
-    * Used CSS Gri for layout
+* CSS3
+    * Used CSS Grid for layout
 * JavaScript 
 * jQuery
 * Node.js
